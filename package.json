@@ -1,0 +1,42 @@
+{
+  "name": "tape-run",
+  "description": "Headless tape test runner",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/juliangruber/tape-run.git"
+  },
+  "homepage": "https://github.com/juliangruber/tape-run",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "bin": {
+    "tape-run": "./bin/run.js"
+  },
+  "dependencies": {
+    "browser-run": "~0.0.6",
+    "tap-finished": "0.0.0",
+    "through": "~2.3.4",
+    "optimist": "~0.5.0",
+    "throughout": "0.0.0"
+  },
+  "devDependencies": {
+    "tape": "~1.0.2",
+    "browserify": "~2.14.1"
+  },
+  "keywords": [
+    "tape",
+    "test",
+    "tap",
+    "runner",
+    "phantomjs",
+    "headless"
+  ],
+  "author": {
+    "name": "Julian Gruber",
+    "email": "mail@juliangruber.com",
+    "url": "http://juliangruber.com"
+  },
+  "license": "MIT"
+}
