@@ -100,6 +100,13 @@ Options:
 
 ## Installation
 
+With [npm](http://npmjs.org) do
+
+```bash
+$ npm install tape-run -g # for cli
+$ npm install tape-run    # for api
+```
+
 ## License
 
 (MIT)
