@@ -12,6 +12,11 @@ var argv = optimist
   .describe('port', 'Wait to be opened by a browser on that port')
   .alias('p', 'port')
 
+  .describe('browser', 'Browser to use. Available if installed: ' +
+      'chrome, firefox, ie, phantom, safari')
+  .alias('b', 'browser')
+  .default('browser', 'phantom')
+
   .describe('help', 'Print usage instructions')
   .alias('h', 'help')
 

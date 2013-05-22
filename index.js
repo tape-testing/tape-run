@@ -9,7 +9,7 @@ function run (opts) {
   if (!opts) opts = {};
 
   var input = through();
-  var browser = browserRun(opts.port);
+  var browser = browserRun(opts);
   var dpl = throughout(input, browser);
 
   browser
