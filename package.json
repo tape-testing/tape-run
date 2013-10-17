@@ -15,7 +15,7 @@
     "tape-run": "./bin/run.js"
   },
   "dependencies": {
-    "browser-run": "~0.1.0",
+    "browser-run": "~0.2.2",
     "tap-finished": "0.0.0",
     "through": "~2.3.4",
     "optimist": "~0.5.0",
