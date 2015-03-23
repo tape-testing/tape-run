@@ -1,7 +1,7 @@
 {
   "name": "tape-run",
   "description": "Headless tape test runner",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/juliangruber/tape-run.git"
