@@ -9,7 +9,7 @@
   "homepage": "https://github.com/juliangruber/tape-run",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "make test"
   },
   "bin": {
     "tape-run": "./bin/run.js"
