@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "browser-run": "^2.0.0",
-    "optimist": "~0.5.0",
+    "optimist": "~0.6.1",
     "tap-finished": "0.0.0",
     "through": "~2.3.4",
     "throughout": "0.0.0"
