@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "tape": "~4.2.2",
-    "browserify": "~2.14.1"
+    "browserify": "~12.0.1"
   },
   "keywords": [
     "tape",
