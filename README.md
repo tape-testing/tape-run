@@ -23,7 +23,7 @@ test('a test', function (t) {
 
 Then run this command using tape-run and
 [browserify](https://github.com/substack/browserify) and watch the magic happen
-as the TAP results stream in from a browser:
+as the TAP results stream in from a browser (default: electron):
 
 ```bash
 $ browserify test/*.js | tape-run
@@ -85,7 +85,7 @@ ok 1 true
 Increase this value if tests finish without all tests being run.
 * `port (Number)`: If you specify a port it will wait for you to open a browser
 on `http://localhost:<port>` and tests will be run there.
-* `browser (String)`: Browser to use. Defaults to `phantom`. Available if installed:
+* `browser (String)`: Browser to use. Defaults to `electron`. Available if installed:
   * `chrome`
   * `firefox`
   * `ie`
@@ -100,10 +100,10 @@ Pipe a browserify stream into this.
 browserify [opts] [files] | tape-run [opts]
 
 Options:
-  --wait, -w     Timeout for tap-finished
-  --port, -p     Wait to be opened by a browser on that port
-  --browser, -b  Browser to use. Available if installed: chrome, firefox, ie, phantom, safari  [default: "phantom"]
-  --help, -h     Print usage instructions
+  --wait     Timeout for tap-finished                                                                                
+  --port     Wait to be opened by a browser on that port                                                             
+  --browser  Browser to use. Always available: electron. Available if installed: chrome, firefox, ie, phantom, safari  [default: "electron"]
+  --help     Print usage instructions                                                                                
 
 ```
 
