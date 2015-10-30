@@ -1,44 +1,33 @@
 var test = require('tape');
-var fs = require('fs');
 var spawn = require('child_process').spawn;
-var through = require('through');
+var browserify = require('browserify');
 
-var passing = ['one'];
-var failing = ['fail'];
-var fixtures = passing.concat(failing);
+test('cli: one', function (t) {
+  t.plan(1);
 
-/**
- * Run all the fixtures.
- */
+  var run = spawn('node', [ __dirname + '/../bin/run.js' ]);
+  run.stderr.pipe(process.stderr, { end: false });
 
-fixtures.forEach(function (name) {
-  test('cli: ' + name, function (t) {
-    t.plan(2);
+  run.on('exit', function (code) {
+    t.equals(code, 0);
+  });
 
-    var browserify = spawn(__dirname + '/../node_modules/.bin/browserify', [
-      __dirname + '/fixtures/' + name + '.js',
-    ]);
-    browserify.stderr.pipe(process.stderr, { end: false });
-
-    var run = spawn('node', [ __dirname + '/../bin/run.js' ]);
-    run.stderr.pipe(process.stderr, { end: false });
-
-    run.on('exit', function (code) {
-      t.equals(code, Number(passing.indexOf(name) == -1));
-    });
-
-    browserify.stdout.pipe(run.stdin);
-    run.stdout.pipe(through(write, end));
-
-    var out = '';
-
-    function write (chunk) { out += chunk.toString() }
-    function end () {
-      t.equals(out, read(__dirname + '/fixtures/' + name + '.txt'));
-    }
-  })
+  browserify(__dirname + '/fixtures/one.js')
+    .bundle()
+    .pipe(run.stdin);
 });
 
-function read (path) {
-  return fs.readFileSync(path, 'utf8').toString();
-}
+test('cli: fail', function (t) {
+  t.plan(1);
+
+  var run = spawn('node', [ __dirname + '/../bin/run.js' ]);
+  run.stderr.pipe(process.stderr, { end: false });
+
+  run.on('exit', function (code) {
+    t.equals(code, 1);
+  });
+
+  browserify(__dirname + '/fixtures/fail.js')
+    .bundle()
+    .pipe(run.stdin);
+});
