@@ -2,6 +2,7 @@
 
 var run = require('..');
 var optimist = require('optimist');
+var spawn = require('child_process').spawn;
 
 var argv = optimist
   .usage('Pipe a browserify stream into this.\nbrowserify [opts] [files] | $0 [opts]')
@@ -18,6 +19,9 @@ var argv = optimist
   .alias('b', 'browser')
   .default('browser', 'electron')
 
+  .describe('render', 'Command to pipe tap output to for custom rendering')
+  .alias('r', 'render')
+
   .describe('help', 'Print usage instructions')
   .alias('h', 'help')
 
@@ -27,9 +31,19 @@ if (argv.help) {
   return optimist.showHelp();
 }
 
+var runner = run(argv);
+
 process.stdin
-  .pipe(run(argv))
+  .pipe(runner)
   .on('results', function (results) {
     process.exit(Number(!results.ok));
-  })
-  .pipe(process.stdout);
+  });
+
+if (argv.render) {
+  var ps = spawn(argv.render);
+  runner.pipe(ps.stdin);
+  ps.stdout.pipe(process.stdout, { end: false });
+  ps.stderr.pipe(process.stderr, { end: false });
+} else {
+  runner.pipe(process.stdout);
+}

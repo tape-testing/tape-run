@@ -92,7 +92,7 @@ on `http://localhost:<port>` and tests will be run there.
   * `phantom`
   * `safari`
 
-The **CLI** takes the same arguments:
+The **CLI** takes the same arguments, plus `--render` (see blow):
 
 ```bash
 $ tape-run --help
@@ -103,7 +103,21 @@ Options:
   --wait     Timeout for tap-finished                                                                                
   --port     Wait to be opened by a browser on that port                                                             
   --browser  Browser to use. Always available: electron. Available if installed: chrome, firefox, ie, phantom, safari  [default: "electron"]
+  --render   Command to pipe tap output to for custom rendering
   --help     Print usage instructions                                                                                
+
+```
+
+## Custom Rendering
+
+In order to apply custom transformations to tap output without sacrificing the proper exit code, pass `--render` with a command like [tap-spec](https://npmjs.org/package/tap-spec):
+
+```bash
+$ browserify test.js | tape-run --render="tap-spec"
+
+  one
+
+    ✔ true
 
 ```
 
