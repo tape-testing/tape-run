@@ -130,6 +130,14 @@ $ npm install tape-run -g # for cli
 $ npm install tape-run    # for api
 ```
 
+## Using with Travis CI
+
+When using `tape-run` with [Travis CI](https://travis-ci.org) you need to pass `phantom` as the `--browser` option. Travis CI does not have Electron installed.
+
+```bash
+browserify test/*.js | tape-run --browser phantom
+```
+
 ## License
 
 (MIT)
