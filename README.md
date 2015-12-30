@@ -6,6 +6,7 @@ a (headless) browser and returns 0/1 as exit code, so you can use it as your
 `npm test` script.
 
 [![build status](https://secure.travis-ci.org/juliangruber/tape-run.svg)](http://travis-ci.org/juliangruber/tape-run)
+[![downloads](https://img.shields.io/npm/dm/tape-run.svg)](https://www.npmjs.org/package/tape-run)
 
 ## Usage
 
