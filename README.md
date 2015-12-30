@@ -121,6 +121,23 @@ $ browserify test.js | tape-run --render="tap-spec"
 
 ```
 
+## Travis
+
+To use the default electron browser on travis, add this to your travis.yml:
+
+```yml
+addons:
+  apt:
+    packages:
+      - xvfb
+install:
+  - export DISPLAY=':99.0'
+  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+  - npm install
+```
+
+[Source](https://github.com/rhysd/Shiba/blob/055a11a0a2b4f727577fe61371a88d8db9277de5/.travis.yml).
+
 ## Installation
 
 With [npm](http://npmjs.org) do
