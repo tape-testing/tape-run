@@ -24,3 +24,14 @@ test('api: fail', function (t) {
     });
 });
 
+test('api: error', function (t) {
+  t.plan(1);
+
+  browserify(__dirname + '/fixtures/error.js')
+    .bundle()
+    .pipe(run())
+    .on('results', function (results) {
+      t.equal(results.ok, false);
+    });
+});
+
