@@ -22,8 +22,8 @@
     "throughout": "0.0.0"
   },
   "devDependencies": {
-    "tape": "~4.4.0",
-    "browserify": "~12.0.2"
+    "browserify": "^13.0.0",
+    "tape": "~4.4.0"
   },
   "keywords": [
     "tape",
