@@ -17,7 +17,7 @@
   "dependencies": {
     "browser-run": "^3.0.2",
     "optimist": "~0.6.1",
-    "tap-finished": "github:juliangruber/tap-finished#throw",
+    "tap-finished": "https://github.com/juliangruber/tap-finished/tarball/throw",
     "through": "~2.3.4",
     "throughout": "0.0.0"
   },
