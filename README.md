@@ -86,13 +86,17 @@ ok 1 true
 Increase this value if tests finish without all tests being run.
 * `port (Number)`: If you specify a port it will wait for you to open a browser
 on `http://localhost:<port>` and tests will be run there.
-* `browser (String)`: Browser to use. Defaults to `electron`. Available if installed:
+* `browser (String)`: Browser to use. Defaults to `electron`. Usage `--browser=chrome`. Available if installed:
   * `chrome`
   * `firefox`
   * `ie`
   * `phantom`
   * `safari`
-* `browserOptions (Object)`: Browser options, for supported browsers (currently [electron only](https://github.com/atom/electron/blob/master/docs/api/browser-window.md#new-browserwindowoptions)).
+* `browser (Object)`: Object with browser.name and browser.options fields:
+  * `browser.name (String)`: same as `browser (String)`. Usage `--browser.name=chrome`.
+  * `browser.options (Object)`: Browser options, for supported browsers (currently [electron only](https://github.com/atom/electron/blob/master/docs/api/browser-window.md#new-browserwindowoptions)). Usage `--browser.name=electron --browser.options.width=800 --browser.options.height=500 --browser.options.webPreferences.webSecurity=false`
+
+ 
 
 The **CLI** takes the same arguments, plus `--render` (see blow):
 
@@ -104,8 +108,14 @@ browserify [opts] [files] | tape-run [opts]
 Options:
   --wait     Timeout for tap-finished                                                                                
   --port     Wait to be opened by a browser on that port                                                             
-  --browser  Browser to use. Always available: electron. Available if installed: chrome, firefox, ie, phantom, safari  [default: "electron"]
-  --browserOptions  Browser options, for supported browsers (currently electron only). Build options object using dot notation, like --browserOptions.width=800 --browserOptions.height=500 --browserOptions.webPreferences.webSecurity=false
+  --browser       [Object|String]. Object with browser.name and browser.options fields. Or string to pass browser.name only.
+    Always available: electron.
+    Options available: electron only.
+    Available if installed: chrome, firefox, ie, phantom, safari
+    Usage:
+      --browser=chrome - set browser name with no options passed.
+      --browser.name=electron --browser.options.width=800 --browser.options.height=500 --browser.options.webPreferences.webSecurity=false - set browser and specify browser options.
+      
   --render   Command to pipe tap output to for custom rendering
   --help     Print usage instructions                                                                                
 ```
