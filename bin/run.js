@@ -19,6 +19,9 @@ var argv = optimist
   .alias('b', 'browser')
   .default('browser', 'electron')
 
+  .describe('browserOptions', 'Browser options, for supported browsers (currently electron only). ' +
+            'Build options object using dot notation, like --browserOptions.width=800 --browserOptions.height=500 --browserOptions.webPreferences.webSecurity=false')
+
   .describe('render', 'Command to pipe tap output to for custom rendering')
   .alias('r', 'render')
 

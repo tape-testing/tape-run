@@ -92,6 +92,7 @@ on `http://localhost:<port>` and tests will be run there.
   * `ie`
   * `phantom`
   * `safari`
+* `browserOptions (Object)`: Browser options, for supported browsers (currently [electron only](https://github.com/atom/electron/blob/master/docs/api/browser-window.md#new-browserwindowoptions)).
 
 The **CLI** takes the same arguments, plus `--render` (see blow):
 
@@ -104,9 +105,9 @@ Options:
   --wait     Timeout for tap-finished                                                                                
   --port     Wait to be opened by a browser on that port                                                             
   --browser  Browser to use. Always available: electron. Available if installed: chrome, firefox, ie, phantom, safari  [default: "electron"]
+  --browserOptions  Browser options, for supported browsers (currently electron only). Build options object using dot notation, like --browserOptions.width=800 --browserOptions.height=500 --browserOptions.webPreferences.webSecurity=false
   --render   Command to pipe tap output to for custom rendering
   --help     Print usage instructions                                                                                
-
 ```
 
 ## Custom Rendering
