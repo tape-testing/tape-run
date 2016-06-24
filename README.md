@@ -109,6 +109,8 @@ Options:
 
 ```
 
+...or any of the [other options you can pass to browser-run](https://github.com/juliangruber/browser-run#runopts).
+
 ## Custom Rendering
 
 In order to apply custom transformations to tap output without sacrificing the proper exit code, pass `--render` with a command like [tap-spec](https://npmjs.org/package/tap-spec):
