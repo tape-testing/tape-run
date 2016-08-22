@@ -126,7 +126,7 @@ $ browserify test.js | tape-run --render="tap-spec"
 
 ## Headless testing
 
-To use the default electron browser on travis, add this to your travis.yml:
+To use tape-run with travis, we recommend using the default electron browser, which however requires you to add this part to your travis.yml:
 
 ```yml
 addons:
