@@ -23,7 +23,7 @@ test('a test', function (t) {
 ```
 
 Then run this command using tape-run and
-[browserify](https://github.com/substack/browserify) and watch the magic happen
+[browserify](https://github.com/substack/node-browserify) and watch the magic happen
 as the TAP results stream in from a browser (default: electron):
 
 ```bash
