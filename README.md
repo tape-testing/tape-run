@@ -86,6 +86,7 @@ ok 1 true
 Increase this value if tests finish without all tests being run.
 * `port (Number)`: If you specify a port it will wait for you to open a browser
 on `http://localhost:<port>` and tests will be run there.
+* `static (String)`: Serve static files from this directory.
 * `browser (String)`: Browser to use. Defaults to `electron`. Available if installed:
   * `chrome`
   * `firefox`
@@ -103,6 +104,7 @@ browserify [opts] [files] | tape-run [opts]
 Options:
   --wait     Timeout for tap-finished                                                                                
   --port     Wait to be opened by a browser on that port                                                             
+  --static   Serve static files from this directory                                                                  
   --browser  Browser to use. Always available: electron. Available if installed: chrome, firefox, ie, phantom, safari  [default: "electron"]
   --render   Command to pipe tap output to for custom rendering
   --help     Print usage instructions                                                                                

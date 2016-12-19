@@ -13,6 +13,9 @@ var argv = optimist
   .describe('port', 'Wait to be opened by a browser on that port')
   .alias('p', 'port')
 
+  .describe('static', 'Serve static files from this directory')
+  .alias('s', 'static')
+
   .describe('browser', 'Browser to use. ' +
       'Always available: electron. ' +
       'Available if installed: chrome, firefox, ie, phantom, safari')
