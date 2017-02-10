@@ -25,6 +25,9 @@ var argv = optimist
   .describe('render', 'Command to pipe tap output to for custom rendering')
   .alias('r', 'render')
 
+  .describe('keep-open', 'Leave the browser open for debugging after running tests')
+  .alias('k', 'keep-open')
+
   .describe('help', 'Print usage instructions')
   .alias('h', 'help')
 
