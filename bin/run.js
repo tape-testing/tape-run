@@ -27,6 +27,7 @@ var argv = optimist
 
   .describe('keep-open', 'Leave the browser open for debugging after running tests')
   .alias('k', 'keep-open')
+  .alias('keepOpen', 'keep-open')
 
   .describe('help', 'Print usage instructions')
   .alias('h', 'help')

@@ -93,6 +93,7 @@ on `http://localhost:<port>` and tests will be run there.
   * `ie`
   * `phantom`
   * `safari`
+* `keepOpen` (Boolean): Leave the browser open for debugging after running tests.
 
 The **CLI** takes the same arguments, plus `--render` (see blow):
 
@@ -102,12 +103,13 @@ Pipe a browserify stream into this.
 browserify [opts] [files] | tape-run [opts]
 
 Options:
-  --wait     Timeout for tap-finished                                                                                
-  --port     Wait to be opened by a browser on that port                                                             
-  --static   Serve static files from this directory                                                                  
-  --browser  Browser to use. Always available: electron. Available if installed: chrome, firefox, ie, phantom, safari  [default: "electron"]
-  --render   Command to pipe tap output to for custom rendering
-  --help     Print usage instructions                                                                                
+  --wait       Timeout for tap-finished                                                                                
+  --port       Wait to be opened by a browser on that port                                                             
+  --static     Serve static files from this directory                                                                  
+  --browser    Browser to use. Always available: electron. Available if installed: chrome, firefox, ie, phantom, safari  [default: "electron"]
+  --render     Command to pipe tap output to for custom rendering
+  --keep-open  Leave the browser open for debugging after running tests
+  --help       Print usage instructions                                                                                
 
 ```
 

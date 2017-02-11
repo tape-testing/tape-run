@@ -14,7 +14,7 @@ function run (opts) {
 
   browser
     .pipe(finished(opts, function (results) {
-      if(!opts['keep-open']) browser.stop();
+      if(!opts.keepOpen) browser.stop();
       dpl.emit('results', results);
     }));
 
