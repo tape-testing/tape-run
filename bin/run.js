@@ -29,9 +29,10 @@ var argv = optimist
   .alias('k', 'keep-open')
   .alias('keepOpen', 'keep-open')
 
-  .describe('node-integration', 'Enable nodejs integration for electron')
-  .alias('n', 'node-integration')
-  .alias('nodeIntegration', 'node-integration')
+  .describe('node', 'Enable nodejs integration for electron')
+  .alias('n', 'integration')
+  .alias('node-integration', 'node')
+  .alias('nodeIntegration', 'node')
 
   .describe('basedir', 'Set this if you need to require node modules in node mode')
 
