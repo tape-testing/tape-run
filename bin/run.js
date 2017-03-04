@@ -29,6 +29,10 @@ var argv = optimist
   .alias('k', 'keep-open')
   .alias('keepOpen', 'keep-open')
 
+  .describe('node-integration', 'Enable nodejs integration for electron')
+  .alias('n', 'node-integration')
+  .alias('nodeIntegration', 'node-integration')
+
   .describe('help', 'Print usage instructions')
   .alias('h', 'help')
 
