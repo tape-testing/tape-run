@@ -95,6 +95,7 @@ on `http://localhost:<port>` and tests will be run there.
   * `safari`
 * `keepOpen` (Boolean): Leave the browser open for debugging after running tests.
 * `nodeIntegration` (Boolean): Enable nodejs integration for electron.
+* `basedir` (String): Set this if you need to require node modules in `node` mode
 
 The **CLI** takes the same arguments, plus `--render` (see blow):
 
@@ -111,7 +112,8 @@ Options:
   --render            Command to pipe tap output to for custom rendering                                                      
   --keep-open         Leave the browser open for debugging after running tests                                                
   --node-integration  Enable nodejs integration for electron                                                                  
-  --help              Print usage instructions     
+  --basedir           Set this if you need to require node modules in node mode                                               
+  --help              Print usage instructions  
 ```
 
 ...or any of the [other options you can pass to browser-run](https://github.com/juliangruber/browser-run#runopts).

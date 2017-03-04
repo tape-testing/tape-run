@@ -33,6 +33,8 @@ var argv = optimist
   .alias('n', 'node-integration')
   .alias('nodeIntegration', 'node-integration')
 
+  .describe('basedir', 'Set this if you need to require node modules in node mode')
+
   .describe('help', 'Print usage instructions')
   .alias('h', 'help')
 
