@@ -42,6 +42,12 @@ $ echo $?
 0
 ```
 
+## webpack
+
+To use with webpack, simply include this plugin:
+
+https://github.com/syarul/webpack-tape-run
+
 ## API
 
 You can use tape-run from JavaScript too:
