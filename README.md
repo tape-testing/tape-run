@@ -44,9 +44,7 @@ $ echo $?
 
 ## webpack
 
-To use with webpack, simply include this plugin:
-
-https://github.com/syarul/webpack-tape-run
+To use with [webpack](https://webpack.github.io/), set up a `webpack.test.config.js` to bundle your tape tests. Then, include [webpack-tape-run](https://github.com/syarul/webpack-tape-run) plugin in it. As a result, `$ webpack --config webpack.test.config.js` builds your tests with webpack, runs them in a headless browser, and outputs tap into console with correct exit code. Neat!
 
 ## API
 
