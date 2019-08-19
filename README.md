@@ -50,6 +50,8 @@ $ rollup test/test.js -f iife  | tape-run
 ```
 But maybe you need configuration file that write to stdout and started it with `rollup -c | tape-run` for example like that
 ```
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 import builtins from 'rollup-plugin-node-builtins';
 import istanbul from 'rollup-plugin-istanbul';
 
@@ -57,6 +59,8 @@ export default {
   input: 'test/test.js',
   output: { format: 'iife', sourcemap: 'inline' },
   plugins: [
+    resolve(),
+    commonjs(),
     builtins(),
     istanbul({ exclude: ['dist'] })
   ]
