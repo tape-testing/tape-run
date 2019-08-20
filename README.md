@@ -49,7 +49,7 @@ In simple cases you can run `rollup` and `tape-run` right from command line:
 $ rollup test/test.js -f iife  | tape-run
 ```
 If you want to use a configuration file, here's an example for `rollup -c | tape-run`:
-```
+```js
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import builtins from 'rollup-plugin-node-builtins';
