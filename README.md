@@ -42,7 +42,32 @@ $ echo $?
 0
 ```
 
-## webpack
+## rollup
+
+In simple cases you can run `rollup` and `tape-run` right from command line:
+```bash
+$ rollup test/test.js -f iife  | tape-run
+```
+If you want to use a configuration file, here's an example for `rollup -c | tape-run`:
+```js
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
+import builtins from 'rollup-plugin-node-builtins';
+import istanbul from 'rollup-plugin-istanbul';
+
+export default {
+  input: 'test/test.js',
+  output: { format: 'iife', sourcemap: 'inline' },
+  plugins: [
+    resolve(),
+    commonjs(),
+    builtins(),
+    istanbul({ exclude: ['dist'] })
+  ]
+}
+```
+
+## With webpack
 
 To use with [webpack](https://webpack.github.io/), set up a `webpack.test.config.js` to bundle your tape tests. Then, include [webpack-tape-run](https://github.com/syarul/webpack-tape-run) plugin in it. As a result, `$ webpack --config webpack.test.config.js` builds your tests with webpack, runs them in a headless browser, and outputs tap into console with correct exit code. Neat!
 
