@@ -42,7 +42,7 @@ $ echo $?
 0
 ```
 
-## With rollup
+## rollup
 
 In simple cases you can run it from command line
 ```bash
