@@ -66,7 +66,6 @@ export default {
   ]
 }
 ```
-Add plugins that you need too! Also you can save intermediate result from rollup somewhere if you set output file.
 
 ## With webpack
 
