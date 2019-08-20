@@ -48,7 +48,7 @@ In simple cases you can run it from command line
 ```bash
 $ rollup test/test.js -f iife  | tape-run
 ```
-But maybe you need configuration file that write to stdout and started it with `rollup -c | tape-run` for example like that
+If you want to use a configuration file, here's an example for `rollup -c | tape-run`:
 ```
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
