@@ -44,7 +44,7 @@ $ echo $?
 
 ## rollup
 
-In simple cases you can run it from command line
+In simple cases you can run `rollup` and `tape-run` right from command line:
 ```bash
 $ rollup test/test.js -f iife  | tape-run
 ```
