@@ -1,8 +1,7 @@
-sudo: false
 language: node_js
 node_js:
   - 12
-  - 13
+  - 14
 addons:
   apt:
     packages:
