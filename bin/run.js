@@ -34,6 +34,10 @@ var argv = optimist
   .alias('node-integration', 'node')
   .alias('nodeIntegration', 'node')
 
+  .describe('sandbox', 'Enable electron sandbox')
+  .boolean('sandbox')
+  .default('sandbox', true)
+
   .describe('basedir', 'Set this if you need to require node modules in node mode')
 
   .describe('help', 'Print usage instructions')

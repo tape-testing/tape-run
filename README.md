@@ -122,9 +122,10 @@ on `http://localhost:<port>` and tests will be run there.
   * `ie`
   * `phantom`
   * `safari`
-* `keepOpen` (Boolean): Leave the browser open for debugging after running tests.
-* `node` (Boolean): Enable nodejs integration for electron.
-* `basedir` (String): Set this if you need to require node modules in `node` mode
+* `keepOpen (Boolean)`: Leave the browser open for debugging after running tests.
+* `node (Boolean)` Enable nodejs integration for electron.
+* `sandbox (Boolean) [Default: true]`: Enable electron sandbox.
+* `basedir` (String): Set this if you need to require node modules in `node` mode.
 
 The **CLI** takes the same arguments, plus `--render` (see blow):
 
@@ -134,15 +135,16 @@ Pipe a browserify stream into this.
 browserify [opts] [files] | tape-run [opts]
 
 Options:
-  --wait       Timeout for tap-finished                                                                                
-  --port       Wait to be opened by a browser on that port                                                             
-  --static     Serve static files from this directory                                                                  
+  --wait       Timeout for tap-finished
+  --port       Wait to be opened by a browser on that port
+  --static     Serve static files from this directory
   --browser    Browser to use. Always available: electron. Available if installed: chrome, firefox, ie, phantom, safari  [default: "electron"]
-  --render     Command to pipe tap output to for custom rendering                                                      
-  --keep-open  Leave the browser open for debugging after running tests                                                
-  --node       Enable nodejs integration for electron                                                                  
-  --basedir    Set this if you need to require node modules in node mode                                               
-  --help       Print usage instructions  
+  --render     Command to pipe tap output to for custom rendering
+  --keep-open  Leave the browser open for debugging after running tests
+  --node       Enable nodejs integration for electron
+  --sandbox    Enable electron sandbox                                                                                   [default: true]
+  --basedir    Set this if you need to require node modules in node mode
+  --help       Print usage instructions
 ```
 
 ...or any of the [other options you can pass to browser-run](https://github.com/juliangruber/browser-run#runopts).
