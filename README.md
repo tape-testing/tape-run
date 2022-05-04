@@ -5,7 +5,7 @@ A [tape](https://github.com/substack/tape) test runner that runs your tests in
 a (headless) browser and returns 0/1 as exit code, so you can use it as your
 `npm test` script.
 
-[![build status](https://secure.travis-ci.org/juliangruber/tape-run.svg)](http://travis-ci.org/juliangruber/tape-run)
+[![CI](https://github.com/juliangruber/tape-run/actions/workflows/ci.yml/badge.svg)](https://github.com/juliangruber/tape-run/actions/workflows/ci.yml)
 [![downloads](https://img.shields.io/npm/dm/tape-run.svg)](https://www.npmjs.org/package/tape-run)
 
 ## Usage
