@@ -17,7 +17,7 @@
   "dependencies": {
     "@juliangruber/tap-finished": "0.0.2",
     "browser-run": "^10.1.0",
-    "through": "~2.3.4",
+    "through": "^2.3.8",
     "throughout": "0.0.0",
     "yargs": "^17.4.1"
   },
