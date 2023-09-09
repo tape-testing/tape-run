@@ -14,5 +14,5 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: npm ci
-      - run: xvfb-run --auto-servernum npm test
+      - run: xvfb-run npm test
         timeout-minutes: 5
